@@ -92,6 +92,7 @@ You are free to use, modify, and distribute this software under the terms of the
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Authors
 
 - **Mateo Jaimes** – [GitHub Profile](https://github.com/MateoJaimes)
+- **Andres Franco** – [GitHub Profile](https://github.com/PIPEFRANCO)
