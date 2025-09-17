@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subastas Online - Inicio</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+    <!-- Header -->
+    <%- include('partials/header') %>
+
+    <!-- Banner Principal -->
+    <section class="hero-banner">
+        <div class="banner-content">
+            <h1>Subastas Online</h1>
+            <p>Encuentra productos únicos y gana las mejores ofertas</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <button>Buscar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorías -->
+    <section class="categories">
+        <h2>Categorías Populares</h2>
+        <div class="category-list">
+            <div class="category-item">Arte</div>
+            <div class="category-item">Electrónica</div>
+            <div class="category-item">Deportes</div>
+            <div class="category-item">Moda</div>
+            <div class="category-item">Coleccionables</div>
+        </div>
+    </section>
+
+    <!-- Subastas Recientes -->
+    <section class="product-section">
+        <div class="section-header">
+            <h2>Subastas Recientes</h2>
+            <a href="#" class="view-all">Ver todas</a>
+        </div>
+        <div class="product-grid">
+            <% for(let i = 0; i < 4; i++) { %>
+                <%- include('partials/product-card', {product: recentProducts[i]}) %>
+            <% } %>
+        </div>
+    </section>
+
+    <!-- Más Visitadas -->
+    <section class="product-section">
+        <div class="section-header">
+            <h2>Más Visitadas</h2>
+            <a href="#" class="view-all">Ver todas</a>
+        </div>
+        <div class="product-grid">
+            <% for(let i = 0; i < 4; i++) { %>
+                <%- include('partials/product-card', {product: popularProducts[i]}) %>
+            <% } %>
+        </div>
+    </section>
+
+    <!-- Subastas Flash -->
+    <section class="product-section flash-auctions">
+        <div class="section-header">
+            <h2>Subastas Flash</h2>
+            <a href="#" class="view-all">Ver todas</a>
+        </div>
+        <div class="product-grid">
+            <% for(let i = 0; i < 4; i++) { %>
+                <%- include('partials/product-card', {product: flashProducts[i]}) %>
+            <% } %>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+</body>
+</html>
